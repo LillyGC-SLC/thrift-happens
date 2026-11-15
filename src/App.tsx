@@ -9,6 +9,9 @@ import logo from './assets/images/logo.png';
 function App() {
   return (
     <>
+      {
+        // logo :)
+      }
       <img id="logo" src={logo} alt="Logo" ></img>
       <ThriftHappensApp data={ data }/>
     </>
