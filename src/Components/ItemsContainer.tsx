@@ -3,6 +3,9 @@ import type { ItemInfo } from "./ThriftHappensApp";
 import type { CheckoutItem } from "./ThriftHappensApp";
 import ItemCard from "./ItemCard";
 
+// Lilly Grant Cochrane
+// Web Development Project #1
+
 interface ItemsContainerProps {
   data: ClothingProduct[];
   itemInfo: ItemInfo[];

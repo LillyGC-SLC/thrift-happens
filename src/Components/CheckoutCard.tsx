@@ -1,5 +1,8 @@
 import type { CheckoutItem } from "./ThriftHappensApp";
 
+// Lilly Grant Cochrane
+// Web Development Project #1
+
 export interface CheckoutCardProps extends CheckoutItem
 {
   handleRemoveFromCart: (checkoutItem: CheckoutItem) => void;

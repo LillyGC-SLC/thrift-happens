@@ -2,6 +2,9 @@ import type { ClothingProduct } from "../data/data";
 import type { ItemInfo } from "./ThriftHappensApp";
 import type { CheckoutItem } from "./ThriftHappensApp";
 
+// Lilly Grant Cochrane
+// Web Development Project #1
+
 interface ItemCardProps extends ClothingProduct {
   itemInfo: ItemInfo;
   handleQuantityAdjust: (delta: number) => void;
@@ -35,9 +38,18 @@ export default function ItemCard({
           ? `Quantity: ${itemInfo.quantity}`
           : "Out of stock"}
       </p>
+      {
+        // Disables the '-' button if the selected amount is less than or equal to 0.
+        // Disables the '+' button if the selected amount is greater than or equal to the item's stock quantity.
+        // Note: I probably could've gotten away with just saying selected amount === 0 or selected amount === stock quantity,
+        // but I chose to do it this way just in case some crazy glitch or something happened on the user's end.
+      }
       <button onClick={() => handleQuantityAdjust(-1)} disabled={itemInfo.itemQuantity <= 0 ? true : false}>{" - "}</button>
       <span>{itemInfo.itemQuantity}</span>
       <button onClick={() => handleQuantityAdjust(1)} disabled={itemInfo.itemQuantity >= itemInfo.quantity ? true : false}>{" + "}</button>
+      {
+        // Disables the Add to Cart button if an item is out of stock.
+      }
       <button
         onClick={() => {
           if (

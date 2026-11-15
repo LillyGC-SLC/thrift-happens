@@ -3,6 +3,9 @@ import CheckoutContainer from "./CheckoutContainer";
 import ItemsContainer from "./ItemsContainer";
 import { useState } from "react";
 
+// Lilly Grant Cochrane
+// Web Development Project #1
+
 interface ItemData {
   data: ClothingProduct[];
 }
@@ -71,6 +74,8 @@ export default function ThriftHappensApp({ data }: ItemData) {
 
       // If the item already exists in the shopping cart, replace the entry in the array with an updated one with the
       // correct quantity instead of adding it as a seperate entry.
+      // If existingIndex returns -1, then the entry is unique. Otherwise, the entry exists in the cart and must be
+      // replaced.
       if (existingIndex > -1) {
         const updatedCart = [...prevCart];
         const existingItem = prevCart[existingIndex];
